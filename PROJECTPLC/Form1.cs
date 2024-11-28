@@ -56,7 +56,7 @@ namespace PROJECTPLC
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Error: " + ex.Message);
+                    MessageBox.Show("Errorrrrr: " + ex.Message);
                 }
             }
         }
@@ -355,6 +355,11 @@ namespace PROJECTPLC
         }
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
         {
 
         }
