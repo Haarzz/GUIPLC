@@ -30,7 +30,7 @@ namespace PROJECTPLC
         private void btn_connect_Click(object sender, EventArgs e)
         {
             listBox1.Items.Clear();
-            btn_connect.Text = "Connect";
+            btn_connect.Text = "Connecct";
             btn_connect.Enabled =false ;
             btn_discon.Enabled = true;
 
