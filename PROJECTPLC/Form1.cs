@@ -131,7 +131,17 @@ namespace PROJECTPLC
             {
                 if (serialPort1.IsOpen)
                 {
-                    serialPort1.Write("@00WR00000002*" + '\r');
+                    string timestamp = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+
+                    // Prepare the message to send
+                    string message = "@00WR00000002*" + '\r';
+
+                    // Log the timestamp and the message to ListBox1
+                    listBox1.Items.Add($"[{timestamp}] Sent: {message}");
+
+                    // Write the message to the serial port
+                    serialPort1.Write(message);
+
                 }
                 else
                 {
@@ -150,7 +160,16 @@ namespace PROJECTPLC
             {
                 if (serialPort1.IsOpen)
                 {
-                    serialPort1.Write("@00WR00000040*" + '\r');
+                    string timestamp = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+
+                    // Prepare the message to send
+                    string message = "@00WR00000040*" + '\r';
+
+                    // Log the timestamp and the message to ListBox1
+                    listBox1.Items.Add($"[{timestamp}] Sent: {message}");
+
+                    // Write the message to the serial port
+                    serialPort1.Write(message);
                 }
                 else
                 {
@@ -169,7 +188,16 @@ namespace PROJECTPLC
             {
                 if (serialPort1.IsOpen)
                 {
-                    serialPort1.Write("@00WR00000020*" + '\r');
+                    string timestamp = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+
+                    // Prepare the message to send
+                    string message = "@00WR00000020*" + '\r';
+
+                    // Log the timestamp and the message to ListBox1
+                    listBox1.Items.Add($"[{timestamp}] Sent: {message}");
+
+                    // Write the message to the serial port
+                    serialPort1.Write(message);
                 }
                 else
                 {
@@ -188,7 +216,16 @@ namespace PROJECTPLC
             {
                 if (serialPort1.IsOpen)
                 {
-                    serialPort1.Write("@00WR00000004*" + '\r');
+                    string timestamp = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+
+                    // Prepare the message to send
+                    string message = "@00WR00000004*" + '\r';
+
+                    // Log the timestamp and the message to ListBox1
+                    listBox1.Items.Add($"[{timestamp}] Sent: {message}");
+
+                    // Write the message to the serial port
+                    serialPort1.Write(message);
                 }
                 else
                 {
@@ -207,7 +244,16 @@ namespace PROJECTPLC
             {
                 if (serialPort1.IsOpen)
                 {
-                    serialPort1.Write("@00WR00000010*" + '\r');
+                    string timestamp = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+
+                    // Prepare the message to send
+                    string message = "@00WR00000010*" + '\r';
+
+                    // Log the timestamp and the message to ListBox1
+                    listBox1.Items.Add($"[{timestamp}] Sent: {message}");
+
+                    // Write the message to the serial port
+                    serialPort1.Write(message);
                 }
                 else
                 {
@@ -226,7 +272,16 @@ namespace PROJECTPLC
             {
                 if (serialPort1.IsOpen)
                 {
-                    serialPort1.Write("@00WR00000008*" + '\r');
+                    string timestamp = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+
+                    // Prepare the message to send
+                    string message = "@00WR00000008*" + '\r';
+
+                    // Log the timestamp and the message to ListBox1
+                    listBox1.Items.Add($"[{timestamp}] Sent: {message}");
+
+                    // Write the message to the serial port
+                    serialPort1.Write(message);
                 }
                 else
                 {
@@ -290,7 +345,16 @@ namespace PROJECTPLC
             {
                 if (serialPort1.IsOpen)
                 {
-                    serialPort1.Write("@00WR00000080*" + '\r');
+                    string timestamp = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+
+                    // Prepare the message to send
+                    string message = "@00WR00000080*" + '\r';
+
+                    // Log the timestamp and the message to ListBox1
+                    listBox1.Items.Add($"[{timestamp}] Sent: {message}");
+
+                    // Write the message to the serial port
+                    serialPort1.Write(message);
                 }
                 else
                 {
@@ -309,7 +373,16 @@ namespace PROJECTPLC
             {
                 if (serialPort1.IsOpen)
                 {
-                    serialPort1.Write("@00WR00000100*" + '\r');
+                    string timestamp = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+
+                    // Prepare the message to send
+                    string message = "@00WR00000100*" + '\r';
+
+                    // Log the timestamp and the message to ListBox1
+                    listBox1.Items.Add($"[{timestamp}] Sent: {message}");
+
+                    // Write the message to the serial port
+                    serialPort1.Write(message);
                 }
                 else
                 {
@@ -350,7 +423,7 @@ namespace PROJECTPLC
             string fcsAscii = ConvertFcsToAscii(fcs);
 
             listBox2.Items.Add($"FCS: {fcsAscii}");
-            listBox2.Items.Add($"Command: {inputText}{fcsAscii}*CR");
+            listBox2.Items.Add($"Hasil: {inputText}{fcsAscii}*CR");
             SendData($"{inputText}{fcsAscii}*CR");
         }
 
@@ -360,6 +433,21 @@ namespace PROJECTPLC
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripLabel1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
